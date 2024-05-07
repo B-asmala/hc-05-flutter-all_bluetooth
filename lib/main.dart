@@ -228,7 +228,7 @@ class _ChatScreenState extends State<ChatScreen> {
         child: Column(
           children: [
             Expanded(
-              child: ValueListenableBuilder(
+              child: ValueListenableBuilder<List<String>>(
                   valueListenable: messageListener,
                   builder: (context, messages, child) {
                     return ListView.builder(
@@ -299,7 +299,7 @@ class DeviceListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ValueListenableBuilder(
+      child: ValueListenableBuilder<List<BluetoothDevice>>(
           valueListenable: notifier,
           builder: (context, value, child) {
             return Column(
